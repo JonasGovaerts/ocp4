@@ -1,5 +1,17 @@
-### source reference ###
+### Summary ###
+
+### Source reference ###
 https://docs.openshift.com/container-platform/4.3/installing/installing_bare_metal/installing-bare-metal-network-customizations.html
+
+### Requirements ###
+* [DHCP](#dhcp)
+* [DNS]
+* [Loadbalancer]
+* [Internet Connection]
+* [ssh keypair]
+* [pull secret]
+
+### DHCP ###
 
 ### loadbalancer ###
 
@@ -34,7 +46,11 @@ tar -xvzf <filenames>
 ### create direcotry and create install-config.yml file ###
 ````bash
 mkdir install_dir
-echo 'apiVersion: v1
+ssh_public_key='<value>'
+pullSecret='<value>'
+
+echo \
+"apiVersion: v1
 baseDomain: openshift.local
 compute:
 - hyperthreading: Enabled
@@ -43,9 +59,9 @@ compute:
 controlPlane:
   hyperthreading: Enabled
   name: master
-  replicas: 1
+  replicas: 3
 metadata:
-  name: test
+  name: $cluster_id
 networking:
   clusterNetwork:
   - cidr: 10.128.0.0/14
@@ -55,8 +71,8 @@ networking:
   - 172.30.0.0/16
 platform:
   none: {}
-pullSecret: 
-sshKey:' 
+pullSecret: '$pullSecret'
+sshKey: '$ssh_pub_key'" > ./install_dir/install-config.yml
 ````
 
 ### create manifests and config files
@@ -73,5 +89,3 @@ sed -i 's/true/false' ./install_dir/manifests/....
 ````bash
 ./openshift-install create ignition-configs --dir=installation_directory
 ````
-
-
