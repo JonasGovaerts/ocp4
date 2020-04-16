@@ -5,25 +5,26 @@ https://docs.openshift.com/container-platform/4.3/installing/installing_bare_met
 
 ### Requirements ###
 * [DHCP](#dhcp)
-* [DNS]
-* [Loadbalancer]
-* [Internet Connection]
-* [ssh keypair]
-* [pull secret]
+* [DNS](#dns)
+* [Loadbalancer](#loadbalancer)
+* [Internet Connection](#internet-connection)
+* [ssh keypair](#ssh-keypair)
+* [pull secret](#pull-secret)
 
 ### DHCP ###
 
-### loadbalancer ###
-
-[haproxy](https://github.com/JonasGovaerts/ocp4/tree/development/haproxy)
-
-
-### DNS config needed ###
-- "api.cluster-name.base-domain"
+### DNS ###
+- "api.__<cluster-name>__.base-domain"
 - "api-int.cluster-name.base-domain"
 - "*.apps.cluster-name.base-domain"
 - "etcd-index.cluster-name.base-domain"
 - "_etcd-server-ssl._tcp.cluster-name.base-domain port: 2380 target: etcd-index.cluster-name.base-domain"
+
+### Loadbalancer ###
+
+[haproxy](https://github.com/JonasGovaerts/ocp4/tree/development/haproxy)
+
+
 
 ### latest version of openshift can be found here ###
 https://cloud.redhat.com/openshift/install/metal/user-provisioned
