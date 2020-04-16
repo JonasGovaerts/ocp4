@@ -3,7 +3,7 @@ https://docs.openshift.com/container-platform/4.3/installing/installing_bare_met
 
 ### loadbalancer ###
 
-[haproxy]
+[haproxy](https://github.com/JonasGovaerts/ocp4/tree/development/haproxy)
 
 
 ### DNS config needed ###
