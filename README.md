@@ -57,7 +57,7 @@ RedHat created a script to generate these ignition files.
 Steps to operate this script:
 
 ````bash
-mkdir install_dir # create folder where install-config.yml will be placed
+mkdir install_dir 		# create folder where install-config.yml will be placed
 
 ssh_public_key='<value>' 	# set ssh_public_key value to the value of the newly generated ssh keypair
 pullSecret='<value>' 		# set the pullSecret value to the value of the obtained pullsecret from RedHat
