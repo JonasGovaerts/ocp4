@@ -10,6 +10,7 @@ https://docs.openshift.com/container-platform/4.3/installing/installing_bare_met
 * [SSH keypair](#ssh-keypair)
 * [Pull secret](#pull-secret)
 * [OpenShift client tools](#obtaining-coreos-igntion-files-to-configure-vms)
+* [Terraform](#terraform)
 
 ### DHCP ###
 
