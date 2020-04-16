@@ -63,7 +63,7 @@ mkdir install_dir 		# create folder where install-config.yml will be placed
 
 ssh_public_key='<value>' 	# set ssh_public_key value to the value of the newly generated ssh keypair
 pullSecret='<value>' 		# set the pullSecret value to the value of the obtained pullsecret from RedHat
-²cluster_id'<value> 		# set the cluster_id value to the value chosen for the cluster name
+cluster_id'<value> 		# set the cluster_id value to the value chosen for the cluster name
 
 echo \
 "apiVersion: v1
