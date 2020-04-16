@@ -14,11 +14,11 @@ https://docs.openshift.com/container-platform/4.3/installing/installing_bare_met
 ### DHCP ###
 
 ### DNS ###
-- "api.__<cluster-name>__.base-domain"
-- "api-int.cluster-name.base-domain"
-- "*.apps.cluster-name.base-domain"
-- "etcd-index.cluster-name.base-domain"
-- "_etcd-server-ssl._tcp.cluster-name.base-domain port: 2380 target: etcd-index.cluster-name.base-domain"
+- api.\<cluster-name\>.\<base-domain\>
+- api-int.\<cluster-name\>.\<base-domain\>
+- \*.apps.\<cluster-name\>.\<base-domain\>
+- etcd-index.cluster-name.base-domain"
+- \_etcd-server-ssl._tcp.cluster-name.base-domain port: 2380 target: etcd-index.cluster-name.base-domain"
 
 ### Loadbalancer ###
 
