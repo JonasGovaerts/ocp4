@@ -9,7 +9,7 @@ https://docs.openshift.com/container-platform/4.3/installing/installing_bare_met
 * [Loadbalancer](#loadbalancer)
 * [SSH keypair](#ssh-keypair)
 * [Pull secret](#pull-secret)
-* [OpenShift client tools]
+* [OpenShift client tools](#obtaining-coreos-igntion-files-to-configure-vms)
 
 ### DHCP ###
 
@@ -46,8 +46,10 @@ To get these, you can use following commands:
 ````bash
 wget -R -O https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-install-linux.tar.gz
 tar -xvzf openshift-install-linux.tar.gz
+rm openshift-install-linux.tar.gz
 wget -R -O https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz
 tar -xvzf openshift-client-linux.tar.gz 
+rm openshift-client-linux.tar.gz
 ````
 
 ### Obtaining coreos igntion files to configure VMs ###
