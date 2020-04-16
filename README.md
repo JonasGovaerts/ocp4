@@ -1,9 +1,9 @@
-### Summary ###
+# Summary #
 
-### Source reference ###
+# Source reference #
 https://docs.openshift.com/container-platform/4.3/installing/installing_bare_metal/installing-bare-metal-network-customizations.html
 
-### Requirements ###
+# Requirements #
 * [DHCP](#dhcp)
 * [DNS](#dns)
 * [Loadbalancer](#loadbalancer)
@@ -33,8 +33,7 @@ Here you can find an [example](https://github.com/JonasGovaerts/ocp4/tree/develo
 
 ### SSH keypair ###
 
-## Pull secret ###
-
+### Pull secret ###
 
 ### Obtaining a pull secret and the latest client tools, installation scripts and coreos image ###
 
@@ -52,7 +51,7 @@ tar -xvzf openshift-client-linux.tar.gz
 rm openshift-client-linux.tar.gz
 ````
 
-### Obtaining coreos igntion files to configure VMs ###
+# Obtaining coreos igntion files to configure VMs #
 OpenShift 4 uses coreos as it's operating system. To configure this, ignition is used.
 RedHat created a script to generate these ignition files.
 
