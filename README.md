@@ -43,9 +43,7 @@ From here, you'll need to get the latest oc client, the installation script and 
 To get these, you can use following commands:
 
 ````bash
-wget -R -O https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-install-linux.tar.gz
-tar -xvzf openshift-install-linux.tar.gz
-rm openshift-install-linux.tar.gz
+wget -R -O https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-install-linux.tar.gz && tar -xvzf openshift-install-linux.tar.gz && rm openshift-install-linux.tar.gz
 wget -R -O https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz
 tar -xvzf openshift-client-linux.tar.gz 
 rm openshift-client-linux.tar.gz
