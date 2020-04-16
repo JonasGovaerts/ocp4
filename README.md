@@ -3,6 +3,8 @@ https://docs.openshift.com/container-platform/4.3/installing/installing_bare_met
 
 ### loadbalancer ###
 
+[haproxy]
+
 
 ### DNS config needed ###
 - "api.cluster-name.base-domain"
