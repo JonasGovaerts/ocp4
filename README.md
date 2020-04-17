@@ -33,6 +33,12 @@ For this deployment, HAProxy was used.
 Here you can find an [example](https://github.com/JonasGovaerts/ocp4/tree/development/haproxy) configuration.
 
 ### SSH keypair ###
+To have access towards the VMs, the OpenShift installation script adds your public key to the authorized_keys via ignition.
+To generate a ssh key pair, you can run the following command:
+
+````bash
+ssh-keygen -t rsa -f ./id_rsa -N ""
+````
 
 ### Pull secret ###
 
@@ -57,11 +63,11 @@ RedHat created a script to generate these ignition files.
 Steps to operate this script:
 
 ````bash
-mkdir install_dir 		# create folder where install-config.yml will be placed
+mkdir install_dir 			# create folder where install-config.yml will be placed
 
-ssh_public_key='<value>' 	# set ssh_public_key value to the value of the newly generated ssh keypair
-pullSecret='<value>' 		# set the pullSecret value to the value of the obtained pullsecret from RedHat
-cluster_id'<value> 		# set the cluster_id value to the value chosen for the cluster name
+ssh_public_key=$(cat id_rsa.pub) 	# set ssh_public_key value to the value of the newly generated ssh keypair
+pullSecret='<value>' 			# set the pullSecret value to the value of the obtained pullsecret from RedHat
+cluster_id'<value> 			# set the cluster_id value to the value chosen for the cluster name
 
 echo \
 "apiVersion: v1
