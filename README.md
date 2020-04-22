@@ -13,6 +13,11 @@ https://docs.openshift.com/container-platform/4.3/installing/installing_bare_met
 * [Terraform](#terraform)
 
 ### DHCP ###
+To make the installation easy, static dhcp should be configured.
+This means you can asign the IP, Gateway, DNS server, routers, ... statically to your VMs
+Based on the mac address of your VM, you can create a static dhcp entry
+
+To my experience, assigning static IPs via terraform is not working. Hence why I would opt for static dhcp
 
 ### DNS ###
 
